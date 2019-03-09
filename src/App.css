@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+.ui.container {
+  margin-top: 5%;
+}
+
+.app-title {
+  font-size: 3em;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+.column {
+  margin-top: 5%;
+}
