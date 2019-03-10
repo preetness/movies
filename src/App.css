@@ -8,8 +8,16 @@
   font-size: 3em;
   font-family: 'Playfair Display', serif;
   text-align: center;
+  background-color: indianred;
+  color: white;
+  border-radius: 20px;
 }
 
 .column {
   margin-top: 5%;
+}
+
+.ui.submit.button {
+  display: flex;
+  justify-content: center;
 }
