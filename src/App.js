@@ -37,6 +37,17 @@ export default class App extends Component {
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
         />
+        {this.state.movies.map(movie => {
+          return (
+            <MovieDetails
+              key={movie.id}
+              title={movie.title}
+              date={movie.release_date}
+              description={movie.overview}
+              poster={movie.poster_path}
+            />
+          );
+        })}
       </div>
     );
   }
