@@ -9,16 +9,19 @@ export default class MoviesList extends Component {
             <div className="ui link cards">
               <div className="card">
                 <div className="image">
-                  <img src="./public/favicon.ico" />
+                  <img
+                    src={`https://image.tmdb.org/t/p/original/${
+                      this.props.poster
+                    }`}
+                    alt="{this.props.title}"
+                  />
                 </div>
                 <div className="content">
-                  <div className="header">Matt Giampietro</div>
+                  <div className="header">{this.props.title}</div>
                   <div className="meta">
-                    <a>Friends</a>
+                    <a>Release: {this.props.date}</a>
                   </div>
-                  <div className="description">
-                    Matthew is an interior designer living in New York.
-                  </div>
+                  <div className="description">{this.props.description}</div>
                 </div>
               </div>
             </div>
