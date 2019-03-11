@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
 
 .ui.container {
   margin-top: 5%;
 }
 
 .app-title {
-  font-size: 3em;
-  font-family: 'Playfair Display', serif;
+  font-size: 3.7em;
+  font-family: 'Lobster Two', serif;
   text-align: center;
   background-color: indianred;
   color: white;
   border-radius: 20px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
+  letter-spacing: 3px;
 }
 
 .column {

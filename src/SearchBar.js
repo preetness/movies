@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 
 export default class SearchBar extends Component {
-  state = {
-    text: ''
-  };
-
-  onInputChange = event => {
-    this.setState({
-      text: event.target.value
-    });
-  };
   render() {
     return (
       <div>
@@ -18,15 +9,20 @@ export default class SearchBar extends Component {
             <div className="one field">
               <div className="field">
                 <input
-                  onChange={this.onInputChange}
+                  onChange={this.props.onInputChange}
                   placeholder="Enter search term(s)"
                   type="text"
-                  value={this.state.text}
+                  value={this.props.search}
                 />
               </div>
             </div>
             <div className="inline field" />
-            <div className="ui submit button">Submit</div>
+            <div
+              className="ui submit button"
+              onClick={this.props.onHandleSearch}
+            >
+              Submit
+            </div>
           </div>
         </div>
       </div>
