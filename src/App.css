@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two');
 
+body {
+  background-color: beige;
+}
 .ui.container {
   margin-top: 5%;
 }
@@ -16,20 +19,21 @@
   letter-spacing: 3px;
 }
 
-.column {
-  margin-top: 5%;
-}
-
-.segment {
+.ui.inverted.segment {
+  margin: 0 auto;
+  margin-top: 3%;
   width: 90%;
 }
 
-div.ui.inverted.segment {
-  margin: 0 auto;
-  margin-top: 3%;
+.movie-card {
+  height: 550px;
+  margin: 15px 15px;
 }
 
-.submit.button {
-  display: flex;
-  justify-content: center;
+.image {
+  height: 435px;
+}
+
+.content {
+  height: 120px;
 }
