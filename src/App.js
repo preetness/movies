@@ -31,23 +31,27 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="ui container">
+      <div>
         <h2 className="app-title">Movie Finder</h2>
         <SearchBar
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
         />
-        {this.state.movies.map(movie => {
-          return (
-            <MovieDetails
-              key={movie.id}
-              title={movie.title}
-              date={movie.release_date}
-              description={movie.overview}
-              poster={movie.poster_path}
-            />
-          );
-        })}
+        <div className="ui container">
+          <div className="ui stackable fluid centered cards">
+            {this.state.movies.map(movie => {
+              return (
+                <MovieDetails
+                  key={movie.id}
+                  title={movie.title}
+                  date={movie.release_date}
+                  description={movie.overview}
+                  poster={movie.poster_path}
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
     );
   }

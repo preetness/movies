@@ -17,11 +17,13 @@ export default class SearchBar extends Component {
               </div>
             </div>
             <div className="inline field" />
-            <div
-              className="ui submit button"
-              onClick={this.props.onHandleSearch}
-            >
-              Submit
+            <div>
+              <button
+                className="fluid ui button"
+                onClick={this.props.onHandleSearch}
+              >
+                Submit
+              </button>
             </div>
           </div>
         </div>
