@@ -27,13 +27,14 @@ body {
 
 .movie-card {
   height: 550px;
-  margin: 15px 15px;
+  margin: 20px 15px;
 }
 
 .image {
-  height: 435px;
+  height: 387px;
+  margin-bottom: 40px;
 }
 
 .content {
-  height: 120px;
+  height: 110px;
 }
