@@ -18,16 +18,16 @@ export default class MoviesList extends Component {
             )}
           </div>
           <div className="content">
+            <MovieModal
+              title={this.props.title}
+              overview={this.props.overview}
+              poster={this.props.poster}
+            />
             <div className="center aligned header">{this.props.title}</div>
             <div className="meta">
               <span className="release">
                 Release: {this.props.date.match(/\d{4}/g)}
               </span>
-              <MovieModal
-                title={this.props.title}
-                overview={this.props.overview}
-                poster={this.props.poster}
-              />
             </div>
           </div>
         </div>
