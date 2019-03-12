@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import image from './noimage.png';
 
 export default class MoviesList extends Component {
   render() {
@@ -6,13 +7,14 @@ export default class MoviesList extends Component {
       <div className="movie-card">
         <div className="ui card">
           <div className="image">
-            <img
-              src={
-                `https://image.tmdb.org/t/p/original/${this.props.poster}` ||
-                './noimage.jpeg'
-              }
-              alt="{this.props.title}"
-            />
+            {this.props.poster !== null ? (
+              <img
+                src={`https://image.tmdb.org/t/p/original/${this.props.poster}`}
+                alt="{this.props.title}"
+              />
+            ) : (
+              <img src={image} alt="{this.props.title}" />
+            )}
           </div>
           <div className="content">
             <div className="header">{this.props.title}</div>
