@@ -33,6 +33,10 @@
 }
 
 .content {
-  height: 85px;
+  height: 145px;
   text-align: center;
+}
+
+.modal-button {
+  display: inline-block;
 }

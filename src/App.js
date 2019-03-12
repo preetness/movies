@@ -63,7 +63,7 @@ export default class App extends Component {
                   key={movie.id}
                   title={movie.title}
                   date={movie.release_date}
-                  description={movie.overview}
+                  overview={movie.overview}
                   poster={movie.poster_path}
                 />
               );

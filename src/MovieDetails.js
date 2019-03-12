@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import image from './noimage.png';
+import MovieModal from './MovieModal';
 
 export default class MoviesList extends Component {
   render() {
@@ -22,6 +23,11 @@ export default class MoviesList extends Component {
               <span className="release">
                 Release: {this.props.date.match(/\d{4}/g)}
               </span>
+              <MovieModal
+                title={this.props.title}
+                overview={this.props.overview}
+                poster={this.props.poster}
+              />
             </div>
           </div>
         </div>
