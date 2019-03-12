@@ -32,5 +32,6 @@ export default class MovieModal extends Component {
 }
 
 const divStyle = {
-  marginBottom: '15px'
+  marginBottom: '15px',
+  marginTop: '5px'
 };
