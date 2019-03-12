@@ -9,6 +9,22 @@ export default class App extends Component {
     search: ''
   };
 
+  nowPlaying = () => {
+    const API_KEY = 'de7cc6bf9531c73cb220773434d8bd50';
+    const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
+    fetch(url)
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          movies: data.results
+        })
+      );
+  };
+
+  componentDidMount() {
+    this.nowPlaying();
+  }
+
   onInputChange = event => {
     this.setState({
       search: event.target.value
@@ -32,7 +48,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h2 className="app-title">Movie Finder</h2>
+        <h2 className="app-title" onClick={() => window.location.reload()}>
+          Movie Finder
+        </h2>
         <SearchBar
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
