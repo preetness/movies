@@ -4,11 +4,13 @@ import { Button, Header, Image, Modal } from 'semantic-ui-react';
 export default class MovieModal extends Component {
   render() {
     return (
-      <div>
+      <div style={divStyle}>
         <div>
           <Modal
             trigger={
-              <Button className="center aligned ui button">Details</Button>
+              <Button attached="bottom" positive>
+                Details
+              </Button>
             }
           >
             <Modal.Content image scrolling>
@@ -28,3 +30,7 @@ export default class MovieModal extends Component {
     );
   }
 }
+
+const divStyle = {
+  marginBottom: '15px'
+};
