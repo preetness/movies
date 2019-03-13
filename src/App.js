@@ -76,6 +76,7 @@ export default class App extends Component {
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
           onFormSubmit={this.onFormSubmit}
+          search={this.state.search}
         />
         <Divider horizontal style={currentMovieStyle}>
           {this.state.header}

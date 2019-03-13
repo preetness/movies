@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class SearchBar extends Component {
   render() {
     return (
-      <form className="ui form" onSubmit={this.props.onFormSubmit}>
+      <form className="ui form error" onSubmit={this.props.onFormSubmit}>
         <div className="field">
           <div className="ui fluid action input">
             <input
@@ -12,7 +12,11 @@ export default class SearchBar extends Component {
               type="text"
               value={this.props.search}
             />
-            <button type="submit" onClick={this.props.onHandleSearch}>
+            <button
+              disabled={!this.props.search}
+              type="submit"
+              onClick={this.props.onHandleSearch}
+            >
               <i className="search icon" />
             </button>
           </div>
