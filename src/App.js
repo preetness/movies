@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MovieDetails from './MovieDetails';
 import './App.css';
 import SearchBar from './SearchBar';
+import { Divider } from 'semantic-ui-react';
 
 export default class App extends Component {
   state = {
@@ -59,6 +60,9 @@ export default class App extends Component {
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
         />
+        <Divider horizontal style={currentMovieStyle}>
+          Current Top Releases
+        </Divider>
         <div className="ui container">
           <div className="ui stackable fluid centered cards">
             {this.state.movies.map(movie => {
@@ -81,5 +85,9 @@ export default class App extends Component {
 }
 
 const headerStyle = {
+  marginTop: '2%'
+};
+
+const currentMovieStyle = {
   marginTop: '2%'
 };
