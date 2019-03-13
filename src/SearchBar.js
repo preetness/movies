@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 
 export default class SearchBar extends Component {
-  onFormSubmit = e => {
-    e.preventDefault();
-  };
-
   render() {
     return (
-      <form className="ui form" onSubmit={this.onFormSubmit}>
+      <form className="ui form" onSubmit={this.props.onFormSubmit}>
         <div className="field">
           <div className="ui fluid action input">
             <input

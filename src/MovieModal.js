@@ -15,13 +15,16 @@ export default class MovieModal extends Component {
           >
             <Modal.Content image scrolling>
               <Image
-                wrapped
-                size="small"
+                className="modal-picture"
+                size="medium"
+                rounded
                 src={`https://image.tmdb.org/t/p/original/${this.props.poster}`}
+                wrapped
+                floated="left"
               />
               <Modal.Description>
                 <Header>{this.props.title}</Header>
-                <p>{this.props.overview}</p>
+                <p wrapped>{this.props.overview}</p>
               </Modal.Description>
               <Rating
                 icon="star"
