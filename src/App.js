@@ -69,6 +69,7 @@ export default class App extends Component {
                   date={movie.release_date}
                   overview={movie.overview}
                   poster={movie.poster_path}
+                  rating={movie.vote_average}
                 />
               );
             })}

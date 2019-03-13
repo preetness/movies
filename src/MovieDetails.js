@@ -22,6 +22,7 @@ export default class MoviesList extends Component {
               title={this.props.title}
               overview={this.props.overview}
               poster={this.props.poster}
+              rating={this.props.rating}
             />
             <div className="center aligned header">{this.props.title}</div>
             <div className="meta">

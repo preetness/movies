@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Header, Image, Modal } from 'semantic-ui-react';
+import { Button, Header, Image, Modal, Rating } from 'semantic-ui-react';
 
 export default class MovieModal extends Component {
   render() {
@@ -23,6 +23,12 @@ export default class MovieModal extends Component {
                 <Header>{this.props.title}</Header>
                 <p>{this.props.overview}</p>
               </Modal.Description>
+              <Rating
+                icon="star"
+                size="large"
+                defaultRating={Math.ceil(this.props.rating / 2)}
+                maxRating={5}
+              />
             </Modal.Content>
           </Modal>
         </div>
