@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './App.css';
+
 import image from './noimage.png';
 import MovieModal from './MovieModal';
 

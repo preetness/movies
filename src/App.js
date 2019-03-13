@@ -46,6 +46,13 @@ export default class App extends Component {
       );
   };
 
+  onFormSubmit = e => {
+    e.preventDefault();
+    this.setState({
+      search: ''
+    });
+  };
+
   render() {
     return (
       <div>
@@ -59,9 +66,10 @@ export default class App extends Component {
         <SearchBar
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
+          onFormSubmit={this.onFormSubmit}
         />
         <Divider horizontal style={currentMovieStyle}>
-          Current Top Releases
+          Now Playing
         </Divider>
         <div className="ui container">
           <div className="ui stackable fluid centered cards">
