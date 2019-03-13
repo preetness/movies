@@ -48,7 +48,11 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h2 className="app-title" onClick={() => window.location.reload()}>
+        <h2
+          style={headerStyle}
+          className="app-title"
+          onClick={() => window.location.reload()}
+        >
           Movie Finder
         </h2>
         <SearchBar
@@ -74,3 +78,7 @@ export default class App extends Component {
     );
   }
 }
+
+const headerStyle = {
+  marginTop: '2%'
+};
