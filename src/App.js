@@ -7,7 +7,8 @@ import { Divider } from 'semantic-ui-react';
 export default class App extends Component {
   state = {
     movies: [],
-    search: ''
+    search: '',
+    header: 'Now Playing'
   };
 
   nowPlaying = () => {
@@ -41,7 +42,8 @@ export default class App extends Component {
       .then(response => response.json())
       .then(data =>
         this.setState({
-          movies: data.results
+          movies: data.results,
+          header: 'Search Results: '
         })
       );
   };
@@ -50,6 +52,13 @@ export default class App extends Component {
     e.preventDefault();
     this.setState({
       search: ''
+    });
+  };
+
+  onSiteRefresh = () => {
+    window.location.reload();
+    this.setState({
+      header: 'Now Playing'
     });
   };
 
@@ -69,7 +78,7 @@ export default class App extends Component {
           onFormSubmit={this.onFormSubmit}
         />
         <Divider horizontal style={currentMovieStyle}>
-          Now Playing
+          {this.state.header}
         </Divider>
         <div className="ui container">
           <div className="ui stackable fluid centered cards">
