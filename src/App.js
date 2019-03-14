@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MovieDetails from './MovieDetails';
+import NoMovies from './NoMovies';
 import './App.css';
 import SearchBar from './SearchBar';
 import { Divider } from 'semantic-ui-react';
@@ -56,11 +57,12 @@ export default class App extends Component {
   };
 
   onSiteRefresh = () => {
-    window.location.reload();
     this.setState({
       header: 'Now Playing'
     });
   };
+
+  checkForMovies = () => {};
 
   render() {
     return (
@@ -68,10 +70,11 @@ export default class App extends Component {
         <h2
           style={headerStyle}
           className="app-title"
-          onClick={() => window.location.reload()}
+          onClick={() => this.onSiteRefresh}
         >
           Movie Finder
         </h2>
+
         <SearchBar
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
