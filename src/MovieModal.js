@@ -29,6 +29,7 @@ export default class MovieModal extends Component {
               <Rating
                 icon="star"
                 size="large"
+                disabled
                 defaultRating={Math.ceil(this.props.rating / 2)}
                 maxRating={5}
               />
