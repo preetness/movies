@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import MovieDetails from './MovieDetails';
-import NoMovies from './NoMovies';
 import './App.css';
 import SearchBar from './SearchBar';
 import { Divider } from 'semantic-ui-react';
+
+const API_KEY = 'de7cc6bf9531c73cb220773434d8bd50';
 
 export default class App extends Component {
   state = {
@@ -13,7 +14,6 @@ export default class App extends Component {
   };
 
   nowPlaying = () => {
-    const API_KEY = 'de7cc6bf9531c73cb220773434d8bd50';
     const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
     fetch(url)
       .then(response => response.json())
@@ -35,7 +35,6 @@ export default class App extends Component {
   };
 
   onHandleSearch = () => {
-    const API_KEY = 'de7cc6bf9531c73cb220773434d8bd50';
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${
       this.state.search
     }&page=1&include_adult=false`;
@@ -91,6 +90,7 @@ export default class App extends Component {
               );
             })}
           </div>
+          )
         </div>
       </div>
     );
