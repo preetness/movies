@@ -56,21 +56,13 @@ export default class App extends Component {
     });
   };
 
-  onSiteRefresh = () => {
-    this.setState({
-      header: 'Now Playing'
-    });
-  };
-
-  checkForMovies = () => {};
-
   render() {
     return (
       <div>
         <h2
           style={headerStyle}
           className="app-title"
-          onClick={() => this.onSiteRefresh}
+          onClick={() => window.location.reload()}
         >
           Movie Finder
         </h2>
