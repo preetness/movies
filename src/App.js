@@ -75,7 +75,7 @@ export default class App extends Component {
         <Divider horizontal style={currentMovieStyle}>
           {this.state.header}
         </Divider>
-        <div className="ui container">
+        <div className="ui grid">
           <div className="ui stackable fluid centered cards">
             {this.state.movies.map(movie => {
               return (
@@ -90,7 +90,6 @@ export default class App extends Component {
               );
             })}
           </div>
-          )
         </div>
       </div>
     );

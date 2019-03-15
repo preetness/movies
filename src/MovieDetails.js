@@ -7,7 +7,7 @@ import MovieModal from './MovieModal';
 export default class MoviesList extends Component {
   render() {
     return (
-      <div className="movie-card">
+      <div className="column movie-card">
         <div className="ui raised card">
           <div className="image">
             {this.props.poster !== null ? (
