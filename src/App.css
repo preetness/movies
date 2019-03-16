@@ -22,14 +22,8 @@
   width: 90%;
 }
 
-.movie-card {
-  height: 570px;
-  margin: 20px 15px;
-}
-
-.image {
+img {
   height: 387px;
-  margin-bottom: 40px;
 }
 
 .content {
