@@ -72,11 +72,11 @@ export default class App extends Component {
           onFormSubmit={this.onFormSubmit}
           search={this.state.search}
         />
-        <Divider horizontal style={currentMovieStyle}>
+        <Divider horizontal section style={currentMovieStyle}>
           {this.state.header}
         </Divider>
         <div className="ui grid">
-          <div className="ui stackable fluid centered cards">
+          <div className="ui stackable centered cards">
             {this.state.movies.map(movie => {
               return (
                 <MovieDetails
@@ -101,5 +101,6 @@ const headerStyle = {
 };
 
 const currentMovieStyle = {
-  marginTop: '2%'
+  marginTop: '2%',
+  marginBottom: '3%'
 };
