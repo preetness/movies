@@ -57,6 +57,7 @@ export default class App extends Component {
   };
 
   render() {
+    const { movies, header, search } = this.state;
     return (
       <div>
         <h2
@@ -71,17 +72,17 @@ export default class App extends Component {
           onInputChange={this.onInputChange}
           onHandleSearch={this.onHandleSearch}
           onFormSubmit={this.onFormSubmit}
-          search={this.state.search}
+          search={search}
         />
         <Divider horizontal section style={currentMovieStyle}>
-          {this.state.header}
+          {header}
         </Divider>
         <div className="ui grid">
-          {this.state.header === 'Search Results: ' ? (
+          {header === 'Search Results: ' && movies.length === 0 ? (
             <NoMovies />
           ) : (
             <div className="ui stackable centered cards">
-              {this.state.movies.map(movie => {
+              {movies.map(movie => {
                 return (
                   <MovieDetails
                     key={movie.id}
