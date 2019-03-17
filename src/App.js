@@ -97,7 +97,8 @@ export default class App extends Component {
 }
 
 const headerStyle = {
-  marginTop: '2%'
+  marginTop: '2%',
+  cursor: 'pointer'
 };
 
 const currentMovieStyle = {
