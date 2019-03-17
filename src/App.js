@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MovieDetails from './MovieDetails';
+import NoMovies from './NoMovies';
 import './App.css';
 import SearchBar from './SearchBar';
 import { Divider } from 'semantic-ui-react';
@@ -76,20 +77,24 @@ export default class App extends Component {
           {this.state.header}
         </Divider>
         <div className="ui grid">
-          <div className="ui stackable centered cards">
-            {this.state.movies.map(movie => {
-              return (
-                <MovieDetails
-                  key={movie.id}
-                  title={movie.title}
-                  date={movie.release_date}
-                  overview={movie.overview}
-                  poster={movie.poster_path}
-                  rating={movie.vote_average}
-                />
-              );
-            })}
-          </div>
+          {this.state.header === 'Search Results: ' ? (
+            <NoMovies />
+          ) : (
+            <div className="ui stackable centered cards">
+              {this.state.movies.map(movie => {
+                return (
+                  <MovieDetails
+                    key={movie.id}
+                    title={movie.title}
+                    date={movie.release_date}
+                    overview={movie.overview}
+                    poster={movie.poster_path}
+                    rating={movie.vote_average}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     );
