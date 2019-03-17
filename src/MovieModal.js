@@ -18,7 +18,8 @@ export default class MovieModal extends Component {
                 className="modal-picture"
                 size="medium"
                 rounded
-                src={`https://image.tmdb.org/t/p/original/${this.props.poster}`}
+                //Remove the poster image for now
+                //src={`https://image.tmdb.org/t/p/original/${this.props.poster}`}
                 wrapped
                 floated="left"
               />
@@ -28,7 +29,7 @@ export default class MovieModal extends Component {
               </Modal.Description>
               <Rating
                 icon="star"
-                size="large"
+                size="medium"
                 disabled
                 defaultRating={Math.ceil(this.props.rating / 2)}
                 maxRating={5}
@@ -42,6 +43,5 @@ export default class MovieModal extends Component {
 }
 
 const divStyle = {
-  marginBottom: '15px',
-  marginTop: '5px'
+  marginBottom: '15px'
 };
