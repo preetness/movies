@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 export default class SearchBar extends Component {
   render() {
     return (
-      <form className="ui form error" onSubmit={this.props.onFormSubmit}>
+      <form
+        className="ui form error"
+        action="#"
+        onSubmit={this.props.onFormSubmit}
+      >
         <div className="field">
           <div className="ui fluid action input">
             <input
