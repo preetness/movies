@@ -11,7 +11,7 @@ export default class App extends Component {
   state = {
     movies: [],
     search: '',
-    header: 'Now Playing'
+    header: ''
   };
 
   nowPlaying = () => {
@@ -20,7 +20,8 @@ export default class App extends Component {
       .then(response => response.json())
       .then(data =>
         this.setState({
-          movies: data.results
+          movies: data.results,
+          header: 'Now Playing'
         })
       );
   };
@@ -63,7 +64,7 @@ export default class App extends Component {
         <h2
           style={headerStyle}
           className="app-title"
-          onClick={() => window.location.reload()}
+          onClick={() => this.nowPlaying()}
         >
           Movie Finder
         </h2>
