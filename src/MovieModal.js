@@ -13,21 +13,13 @@ export default class MovieModal extends Component {
               </Button>
             }
           >
-            <Modal.Content image scrolling>
-              <Image
-                className="modal-picture"
-                size="medium"
-                rounded
-                //Remove the poster image for now
-                //src={`https://image.tmdb.org/t/p/original/${this.props.poster}`}
-                wrapped
-                floated="left"
-              />
+            <Modal.Content wrapped scrolling>
               <Modal.Description>
                 <Header>{this.props.title}</Header>
                 <p wrapped>{this.props.overview}</p>
               </Modal.Description>
               <Rating
+                style={ratingStyle}
                 icon="star"
                 size="medium"
                 disabled
@@ -44,4 +36,8 @@ export default class MovieModal extends Component {
 
 const divStyle = {
   marginBottom: '15px'
+};
+
+const ratingStyle = {
+  marginTop: '15px'
 };
