@@ -5,7 +5,7 @@ import './App.css';
 import SearchBar from './SearchBar';
 import { Divider } from 'semantic-ui-react';
 
-const API_KEY = 'de7cc6bf9531c73cb220773434d8bd50';
+const API_KEY = process.env.REACT_APP_API_KEY
 
 export default class App extends Component {
   state = {
