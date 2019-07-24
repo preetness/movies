@@ -16,12 +16,12 @@ export default class MovieModal extends Component {
             <Modal.Content wrapped scrolling>
               <Modal.Description>
                 <Header>{this.props.title}</Header>
-                <p wrapped>{this.props.overview}</p>
+                <p wrapped="true">{this.props.overview}</p>
               </Modal.Description>
               <Rating
                 style={ratingStyle}
                 icon="star"
-                size="medium"
+                size="large"
                 disabled
                 defaultRating={Math.ceil(this.props.rating / 2)}
                 maxRating={5}
